@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class District extends Model
 {
+
+    protected $fillable = [
+        'name_en',
+        'name_bn',
+        'code',
+        'division_id',
+    ];
+
     public function division()
     {
         return $this->belongsTo(Division::class);
